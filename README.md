@@ -1,8 +1,8 @@
 # RNA-seq differential expression demonstration
 
-RNA-seq differential expression analysis practical demostration for undergrad students. This demonstration uses data from [Rossini et al, 2019](https://doi.org/10.1093/pcp/pcy240). In short the data comes from _Galdieria sulphuraria_, a polyextremophile unicellular red alga that lives in hot, acidic, toxic metal-rich, volcanic environments, in Rossini's study that alga was expossed to cold stress to investigate the transcriptional changes this stress induced in the alga. Other stuff is evaluated regarding horizontal gene transfer from bacteria/archea to _Galdieria sulphuraria_. Reading the paper is strongly suggested. 
+RNA-seq differential expression analysis practical demostration for undergrad students. This demonstration uses data from [Rossini et al, 2019](https://doi.org/10.1093/pcp/pcy240). In short the data comes from _Galdieria sulphuraria_, a polyextremophile unicellular red alga that lives in hot, acidic, toxic metal-rich, volcanic environments, in Rossini's study that alga was expossed to cold stress to investigate the transcriptional changes this stress induced in the alga. Other stuff is evaluated regarding horizontal gene transfer from bacteria/archea to _Galdieria sulphuraria_. **Reading the paper is strongly suggested.** 
 
-In this demonstration a differential expression analysis between a "hot" normal state vs a "cold" state of _Galdieria sulphuraria_ is done. The goal here is to corroborate some of the observations reported in Rossini's paper. 5 out of 25 libraries available from Rossini's data are used in this demonstration 3 from a cold state and 2 from a hot state. 
+In this demonstration a differential expression analysis between a "hot" normal state vs a "cold" state of _Galdieria sulphuraria_ is done. **The goal here is to corroborate some of the observations reported in Rossini's paper**. Take into considerated that 5 out of 25 libraries available from Rossini's data are used in this demonstration 3 from a cold state and 2 from a hot state. 
 
 **Note:** This pipeline is probably far from ideal and is just presented as a good enough demonstration of the concept.
 
