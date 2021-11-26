@@ -1,8 +1,14 @@
 # RNA-seq differential expression demonstration
 
-RNA-seq differential expression analysis practical demostration for undergrad students. This demonstration uses data from [Rossini et al, 2019](https://doi.org/10.1093/pcp/pcy240). In short the data comes from _Galdieria sulphuraria_, a polyextremophile unicellular red alga that lives in hot, acidic, toxic metal-rich, volcanic environments, in Rossini's study that alga was expossed to cold stress to investigate the transcriptional changes this stress induced in the alga. Other stuff is evaluated regarding horizontal gene transfer from bacteria/archea to _Galdieria sulphuraria_. **Reading the paper is strongly suggested.** 
+RNA-seq is a special type of sequencing that aims to look at the expression patterns of genes. It focuses primarily on sequencing messenger RNA (mRNA), which will be translated into an amino acid sequence and yield a protein as the final product. 
+This technique facilitates the observation of transcripts resulting from alternative splicing, post-transcriptional modification, gene changes and single nucleotide polymorphisms.
 
-In this demonstration a differential expression analysis between a "hot" normal state vs a "cold" state of _Galdieria sulphuraria_ is done. **The goal here is to corroborate some of the observations reported in Rossini's paper**. Take into considerated that 5 out of 25 libraries available from Rossini's data are used in this demonstration 3 from a cold state and 2 from a hot state. 
+
+RNA-seq differential expression analysis practical demostration for undergrad students. This demonstration uses data from [Rossini et al, 2019](https://doi.org/10.1093/pcp/pcy240). 
+
+In short the data comes from _Galdieria sulphuraria_, a polyextremophile unicellular red alga that lives in hot, acidic, toxic metal-rich, volcanic environments, in Rossini's study that alga was expossed to cold stress to investigate the transcriptional changes this stress induced in the alga. Other stuff is evaluated regarding horizontal gene transfer from bacteria/archea to _Galdieria sulphuraria_. **Reading the paper is strongly suggested.** 
+
+In this demonstration a differential expression analysis between a "hot" normal state vs a "cold" state of _Galdieria sulphuraria_ is done. **The purpose of this is to confirm some of the observations reported in Rossini's paper**. It should be considered that 5 out of 25 libraries available from Rossini's data are used in this demonstration 3 from a cold state and 2 from a hot state. 
 
 **Note:** This pipeline is probably far from ideal and is just presented as a good enough demonstration of the concept.
 
@@ -18,7 +24,7 @@ Some of the bash scripts(".sh" files) have a "threads" variable set to 4, you sh
 
 ### Software setup
 
-First you should download this repository and then open a terminal in the downloaded repository. Then you have to create a conda environment from the .yml file, this environment will contain the software required to run this demonstration. For that you can run the following command:
+First, you should download this repository and then open a terminal in the downloaded repository. Then you have to create a conda environment from the .yml file, this environment will contain the software required to run this demonstration. For that you can run the following command:
 
 ```
 conda env create -f Workshop_conda_environment.yml
@@ -44,7 +50,7 @@ Galdieria_sulphuraria.gtf
 ```
 #### RNA-seq data 
 
-Next the RNA-seq pair-end data is downloaded. For this step you need ~7Gb of disk space and it may take quite a while. To do this you can run the following command:
+Then the RNA-seq pair-end data is downloaded. For this step you need ~7Gb of disk space and it may take quite a while. To do this you can run the following command:
 
 ```
 2-Download_RNA-seq_data.sh 
@@ -94,12 +100,12 @@ This will create a "rsem_ref" folder containing the reference files created from
 
 ## RSEM gene count generation
 
-In this step RSEM with the aid of bowtie2 aligns the RNA-seq reads to the genome and then generates gene counts. This step is the most computationally intensive of the whole pipeline so it will take quite a while, patience is adviced. To do this step you can run the following command:
+In the next step RSEM with the aid of bowtie2 aligns the RNA-seq reads to the genome and then generates gene counts. This step is the most computationally intensive of the whole pipeline so it will take quite a while, patience is adviced. To do this step you can run the following command:
 
 ```
 bash 5-RSEM_run.sh
 ```
-This will create a "rsem_run" folder containing gene count results, in particular .genes.results files contain the data used in the next step:
+Thus creating a "rsem_run" folder containing gene count results, in particular .genes.results files contain the data used in the next step:
 
 ## DEseq2 differential expression detection
 
