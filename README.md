@@ -28,6 +28,13 @@ If you have mamba you may use:
 ```
 mamba env create -f Workshop_conda_environment.yml
 ```
+
+Before running the next scripts you should activate the created environment with
+
+```
+conda activate work_comp
+```
+
 ### Data download 
 
 #### Genome and annotations
