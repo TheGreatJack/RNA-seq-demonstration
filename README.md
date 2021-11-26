@@ -18,7 +18,7 @@ Some of the bash scripts(".sh" files) have a "threads" variable set to 4, you sh
 
 ### Software setup
 
-First you should download this repository and then open a terminal in the downloaded repository. Then you procceed to create a conda environment from the .yml file, this environment will contain the software required to run this demonstration. To do that you can run the following command:
+First you should download this repository and then open a terminal in the downloaded repository. Then you have to create a conda environment from the .yml file, this environment will contain the software required to run this demonstration. For that you can run the following command:
 
 ```
 conda env create -f Workshop_conda_environment.yml
@@ -44,7 +44,7 @@ Galdieria_sulphuraria.gtf
 ```
 #### RNA-seq data 
 
-Next the RNA-seq pair-end data is downloaded. For this step you need ~7Gb of disk space and it may take quite a while .To do this you can run the following command:
+Next the RNA-seq pair-end data is downloaded. For this step you need ~7Gb of disk space and it may take quite a while. To do this you can run the following command:
 
 ```
 2-Download_RNA-seq_data.sh 
@@ -94,7 +94,7 @@ This will create a "rsem_ref" folder containing the reference files created from
 
 ## RSEM gene count generation
 
-In this step RSEM with the help of bowtie2 aligns the RNA-seq reads to the genome and then generates gene counts. This step is the most computationally intensive of the whole pipeline so it will take quite a while, patience is adviced. To do this step you can run the following command:
+In this step RSEM with the aid of bowtie2 aligns the RNA-seq reads to the genome and then generates gene counts. This step is the most computationally intensive of the whole pipeline so it will take quite a while, patience is adviced. To do this step you can run the following command:
 
 ```
 bash 5-RSEM_run.sh
@@ -108,7 +108,7 @@ In this step a reference needed to run RSEM and bowtie2 is created. To do this y
 ```
 bash 6-DEseq2_run.sh
 ```
-This will create a "DEseq" folder. In this folder the most important folder are "qc" and "out". The first one will contain the QC of the libraries confirming the validity of the analysis. The second one contains the differential gene expression results, in particular "differential_expression.csv"
+This will create a "DEseq" folder. In this folder, the most important are "qc" and "out". The first one will contain the QC of the libraries confirming the validity of the analysis. The second one contains the differential gene expression results, in particular "differential_expression.csv"
 
 ## Note
 
